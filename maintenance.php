@@ -1,6 +1,7 @@
 <?php
 // Respond with 503 Unavailable status code
-http_response_code(503);
+header('HTTP/1.1 503 Service Temporarily Unavailable');
+header('Status: 503 Service Temporarily Unavailable');
 
 // Advise client to try again after 30 minutes (in secs)
 header('Retry-After: 1800');
